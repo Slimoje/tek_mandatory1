@@ -44,7 +44,7 @@ public class AdventureController {
     @GetMapping("/updateActivity/{activityID}")
     public String updateActivity(@PathVariable("activityID") int activityID, Model model) {
         model.addAttribute("activity", activityService.readActivityByID(activityID));
-        return "/updateActivity";
+        return "updateActivity.html";
     }
 
     @PostMapping("/updateActivity")
